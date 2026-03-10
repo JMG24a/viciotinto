@@ -1,0 +1,21 @@
+#product-price {
+    min-height: 24px; /* Evita que el layout salte cuando cargue el texto */
+    display: flex;
+    align-items: center;
+}
+
+/* El Loader circular */
+.loader {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db; /* Color principal */
+    border-radius: 50%;
+    display: inline-block;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

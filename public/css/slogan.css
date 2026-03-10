@@ -1,0 +1,99 @@
+.slogan {
+  position: absolute;
+  left: calc(10% - 67px);
+  top: calc(100% - 127px);
+  z-index: 20;
+}
+
+.slogan h1 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(30px, 4vw, 52px);
+  line-height: 1.1;
+  font-weight: 500;
+  color: #125fc0;
+  text-shadow: 0 1px 3px rgba(175,175,175);
+}
+
+.slogan-main,
+.slogan-sub {
+  display: block;
+}
+
+.slogan-line-deco {
+  width: 60px;
+  height: 2px;
+  background: #a06218; /* tono madera */
+  margin-bottom: 16px;
+
+  opacity: 0;
+  animation: lineIn 1s ease forwards;
+}
+
+@keyframes lineIn {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 20%;
+    opacity: 1;
+  }
+}
+
+.slogan-main {
+  color: wheat;
+  font-size: 4rem;
+  opacity: 0;
+  animation: fadeInSlow 2s ease forwards;
+  animation-delay: 1.6s;
+}
+
+@keyframes fadeInSlow {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.slogan-sub {
+  font-family: "Inter", sans-serif;
+  font-size: 0.55em;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  /* color: #8b6f4e; */
+  color: #0072ff;
+  opacity: 0;
+  transform: translateX(80px);
+  animation: slideInSoft 1.4s ease forwards;
+  animation-delay: 2.4s;
+}
+
+.slogan-sub_white {
+  color: white
+}
+
+@keyframes slideInSoft {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .slogan {
+    left: calc(20% - 60px);
+    top: calc(100% - 80px);
+  }
+
+  .slogan-main {
+    font-size: 1.8rem;
+  }
+
+  .slogan-sub {
+    font-size: 1rem;
+  }
+}

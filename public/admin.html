@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tio Jaime Mueblería</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/image/logo_tjm.png">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="stylesheet" href="/css/bar.css">
+  <link rel="stylesheet" href="/css/slogan_welcome.css">
+  <link rel="stylesheet" href="/css/welcome.css">
+</head>
+<body>
+  <section class="admin">
+    <div class="admin-page">
+      <h1>Administrar Productos</h1>
+      <div class="categories">
+        <p onclick="loadProduct('sofas')">Sofas</p>
+        <p onclick="loadProduct('multimuebles')">Multimuebles</p>
+        <p onclick="loadProduct('dormitorios')">Dormitorio</p>
+        <p onclick="loadProduct('comedores')">Comedores</p>
+        <p onclick="loadProduct('colchones')">Colchones</p>
+      </div>
+
+      <div class="furniture-grid" id="admin-grid"></div>
+    </div>
+
+    <!-- Modal -->
+    <div id="admin-modal" class="modal hidden">
+      <div class="modal-backdrop" onclick="closeAdminModal()"></div>
+
+      <div class="modal-content small">
+        <button class="modal-close" onclick="closeAdminModal()">&times;</button>
+
+        <h2 id="admin-name"></h2>
+
+        <div id="price-form">
+          <label>Precio</label>
+          <input id="admin-price" type="number" step="0.01" required />
+          <input id="admin-password" type="password" step="0.01" required />
+
+          <button type="submit" onclick="submitForm()">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="/js/db.js"></script>
+  <script src="/js/home.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tio Jaime Mueblería</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="icon" type="image/png" href="/image/logo_tjm.png">
+    <link rel="stylesheet" href="/css/list.css">
+    <link rel="stylesheet" href="/css/bar.css">
+    <link rel="stylesheet" href="/css/slogan.css">
+    <link rel="stylesheet" href="/css/welcome.css">
+    <link rel="stylesheet" href="/css/modal.css">
+    <link rel="stylesheet" href="/css/loader.css">
+  </head>
+  <body>
+    <a href="/" class="top-gradient-bar">
+      <img class="logo" src="/image/logo_tjm.png" alt="logo" id="go-home">
+    </a>
+
+    <section class="welcome-slider">
+      <div class="sliders">
+        <!-- <picture>
+          <source media="(max-width: 768px)" srcset="image/4_5_sofas_slider.jpg">
+          <source media="(max-width: 1200px)" srcset="image/slider_sofas_d.png">
+          <img src="image/slider_sofas_d.png" alt="Mueble premium">
+        </picture> -->
+      </div>
+      <div class="slogan">
+        <div class="slogan-line-deco"></div>
+        <h1>
+          <span class="slogan-main">Crea tu espacio</span>
+          <span class="slogan-sub slogan-sub_white">Con los mejores muebles</span>
+        </h1>
+      </div>
+    </section>
+
+    <section class="furniture-section">
+      <div class="furniture-grid"></div>
+    </section>
+
+    <div id="product-modal" class="modal hidden">
+      <div class="modal-backdrop"></div>
+
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+
+        <div class="modal-grid">
+          <!-- Imagen -->
+          <div class="modal-image">
+            <img id="modal-img" src="" alt="">
+          </div>
+
+          <!-- Info -->
+          <aside class="modal-info">
+            <h2 id="modal-name" class="modal-name"></h2>
+            <p id="product-price" class="product-price"></p>
+            <div class="modal-opens" id="modal-chairs"></div>
+            <div class="modal-opens" id="modal-top"></div>
+            <div class="modal-colors" id="modal-colors"></div>
+            <div class="modal-opens" id="modal-open"></div>
+            <div>
+              <p class="size">
+                <i>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#434343">
+                  <path d="M208-120q-37 0-62.5-25.5T120-208v-548q0-29 27-40.5t47 8.5l90 90-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 80 80q20 20 8.5 47T756-120H208Zm32-120h332L240-572v332Z"/>
+                </svg>
+              </i>
+            </p><p id="size" class="size_text"></p>
+            </div>
+            <p id="modal-desc" class="clamp desc"></p>
+            <span id="toggle" class="toggle_desc">Leer más</span>
+          </aside>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/db.js"></script>
+    <script src="/js/home.js"></script>
+    <script src="/js/products.js"></script>
+    <script src="/js/admin.js"></script>
+    <!-- <script src="/js/router.js"></script> -->
+  </body>
+</html>

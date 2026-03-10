@@ -1,0 +1,113 @@
+/* Video */
+.video-container {
+  width: 100%;
+  height: 90vh; /* altura deseada */
+  overflow: hidden; /* oculta lo que se salga */
+  position: relative;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* llena el contenedor sin deformarse */
+  object-position: center center; /* centra el video vertical y horizontalmente */
+}
+
+@media (max-width: 480px) {
+  .video-container {
+    height: 50vh; /* altura deseada */
+  }
+}
+
+/* SLIDER */
+.welcome-slider {
+  width: 100%;
+
+  overflow: hidden; /* oculta lo que se salga */
+  position: relative;
+}
+
+@media (max-width: 480px) {
+  .welcome-slider {
+    height: 50vh; /* altura deseada */
+  }
+}
+
+.sliders {
+  display: flex;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.sliders.fast {
+  transition: transform 0.3s linear;
+}
+
+.sliders img {
+  width: 100vw;
+  object-fit: cover;
+}
+
+
+.about-slider {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.about-slider .slides-about {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.about-slider picture {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.about-slider picture.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.about-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* PROMOTION */
+.promotion-slider {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.promotion-slider .slides-promotion {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.promotion-slider picture {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.promotion-slider picture.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.promotion-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
